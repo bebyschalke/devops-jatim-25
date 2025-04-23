@@ -3,7 +3,7 @@ name: Example Gatus' Job (2/2) - Deploy Gatus
 # FILL THE MISSING VALUES BELOW
 on:
   workflow_dispatch:
-
+    branch: main
 env:
   AWS_REGION: us-east-1
   ECR_REPOSITORY: 058264192418.dkr.ecr.us-east-1.amazonaws.com/lks-gatus

@@ -10,9 +10,9 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
 
   ECS_LEANTIME_SERVICE: lks-oss-cluster
-  LEANTIME_TASK_DEFINITION: lks-leantime-app
-  GATUS_TASK_DEFINITION: lks-gatus
-  LEANTIME_URL: "${{ secrets.ALB_ENDPOINT }}"
+  LEANTIME_TASK_DEFINITION: leantime-service
+  GATUS_TASK_DEFINITION: gatus-service
+  LEANTIME_URL: "lks-oss-lb-64614177.us-east-1.elb.amazonaws.com"
 # FILL THE MISSING VALUES ABOVE
 
 permissions:
@@ -20,7 +20,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy Gatus App
+    name: Deploy Leantime App
     runs-on: ubuntu-latest
     environment: dev
     steps:
@@ -34,10 +34,6 @@ jobs:
           aws-secret-access-key: ${{ secrets.AWS_SECRET_ACCESS_KEY }}
           aws-session-token: ${{ secrets.AWS_SESSION_TOKEN }}
           aws-region: ${{ env.AWS_REGION }}
-
-      - name: Login to Amazon ECR
-        id: login-ecr
-        uses: aws-actions/amazon-ecr-login@v1
 
       - name: Update Configuration
         run: |
@@ -77,7 +73,7 @@ jobs:
           force-new-deployment: true
           run-task-tags: '[{"key": "", "value": ""} , ...]'
 
-      -  name: Deploy Amazon ECS task definition
+      - name: Deploy Amazon ECS task definition
         uses: aws-actions/amazon-ecs-deploy-task-definition@v2
         with:
           task-definition: ${{ env.LEANTIME_TASK_DEFINITION }}

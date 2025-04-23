@@ -10,8 +10,8 @@ env:
   TOKEN: ${{ secrets.TOKEN }}
 
   ECS_LEANTIME_SERVICE: lks-oss-cluster
-  LEANTIME_TASK_DEFINITION: leantime-service
-  GATUS_TASK_DEFINITION: gatus-service
+  LEANTIME_TASK_DEFINITION: lks-leantime-td
+  GATUS_TASK_DEFINITION: lks-gatus-td
   LEANTIME_URL: "${{ secrets.ALB_ENDPOINT }}"
 # FILL THE MISSING VALUES ABOVE
 

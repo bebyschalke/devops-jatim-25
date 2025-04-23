@@ -12,7 +12,7 @@ env:
 
   ECS_LEANTIME_SERVICE:
   LEANTIME_TASK_DEFINITION:
-  LEANTIME_URL: "${{ secrets.ALB_ENDPOINT }}"
+  LEANTIME_URL: "lks-oss-lb-64614177.us-east-1.elb.amazonaws.com"
 # FILL THE MISSING VALUES ABOVE
 
 permissions:

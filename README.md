@@ -1,8 +1,8 @@
 # OSS Project Management
 
-Name: <fill-this-with-your-name>
+Name: Beby Schalke Efrian Nugraha
 <br>
-City: <fill-this-with-your-city>
+City: Malang
 
 ## Getting Started
 

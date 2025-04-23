@@ -1,7 +1,7 @@
 # FILL IN THE MISSING VALUES BELOW
 alerting:
-  ???:
-    token: "<github-token>" # WARN: DO NOT CHANGE THIS LINE
+  pagerduty:
+    token: "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" # WARN: DO NOT CHANGE THIS LINE
 # FILL IN THE MISSING VALUES ABOVE
 
 # FILL IN THE MISSING VALUES BELOW
@@ -11,7 +11,7 @@ endpoints:
     interval:
     conditions:
     alerts:
-      - type: ???
+      - type: pagerduty
         description: "Sensei, Leantime is down! Please check and fix it."
 
   - name: Gatus
@@ -19,6 +19,6 @@ endpoints:
     interval:
     conditions:
     alerts:
-      - type: ???
+      - type: pagerduty
         description: "Sensei, Gatus is down! Please check and fix it."
 # FILL IN THE MISSING VALUES BELOW

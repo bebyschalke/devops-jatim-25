@@ -1,12 +1,12 @@
 {
   // FILL IN THE MISSING VALUES BELOW
-  "family": "",
-  "taskRoleArn": "",
-  "executionRoleArn": "",
-  "networkMode": "",
-  "requiresCompatibilities": ???,
-  "cpu": "",
-  "memory": "",
+  "family": "lks-leantime-app",
+  "taskRoleArn": "arn:aws:iam::058264192418:role/LabRole",
+  "executionRoleArn": "arn:aws:iam::058264192418:role/LabRole",
+  "networkMode": "awsvpc",
+  "requiresCompatibilities": "Fargate",
+  "cpu": "1",
+  "memory": "2048",
   "volumes": [],
   // FILL IN THE MISSING VALUES ABOVE
 
@@ -32,10 +32,10 @@
       "environment": [],
       "mountPoints": [],
       "logConfiguration": {
-        "logDriver": "???",
+        "logDriver": "awslogs",
         "options": {
-          "awslogs-group": "???",
-          "awslogs-region": "???",
+          "awslogs-group": "/ecs/lks/leantime-app",
+          "awslogs-region": "us-east-1",
           "mode": "non-blocking",
           "awslogs-create-group": "true",
           "max-buffer-size": "25m",

@@ -9,8 +9,9 @@ env:
   ECS_CLUSTER: lks-oss-cluster
   TOKEN: ${{ secrets.TOKEN }}
 
-  ECS_LEANTIME_SERVICE:
-  LEANTIME_TASK_DEFINITION:
+  ECS_LEANTIME_SERVICE: lks-oss-cluster
+  LEANTIME_TASK_DEFINITION: leantime-service
+  GATUS_TASK_DEFINITION: gatus-service
   LEANTIME_URL: "lks-oss-lb-64614177.us-east-1.elb.amazonaws.com"
 # FILL THE MISSING VALUES ABOVE
 
